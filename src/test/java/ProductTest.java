@@ -71,4 +71,11 @@ public class ProductTest {
         Assertions.assertArrayEquals(expected, actual);
     }
 
+    @Test
+    public void RepositoryRemoveByIdRuntimeException(){
+
+        Assertions.assertThrows(RuntimeException.class, () -> {
+            repo.removeById(123);
+        });
+    }
 }
