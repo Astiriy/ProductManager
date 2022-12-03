@@ -61,4 +61,14 @@ public class ProductTest {
 
         Assertions.assertArrayEquals(expected, actual);
     }
+
+    @Test
+    public void ManagerNothingFind() {
+
+        Product[] actual = manager.searchBy("Мистер");
+        Product[] expected = {};
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
 }
